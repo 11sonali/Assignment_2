@@ -9,7 +9,7 @@ The dataset of Wikipedia comments made available by Jigsaw, a subsidiary of Goog
 ### Labels and thresholds:
 After visual inspection of the comments, it appeared there could be some bias with regards to words related to LGBTQ. Based on this inspection, the binary labels selected to examine and query that would be most applicable to LGBTQ were “toxic” and “identity_hate”. Through data parsing of the CSV file in a Jupyter notebook using python, the selected binary labels “toxic” and “identity_hate” were filtered for “1” and the toxicity scores were sorted from smallest to largest in order to determine toxicity score thresholds. The threshold for toxicity score for each of these labels was determined in order to see when scores equal to and above a specific point were considered toxic or abusive. The threshold of the selected labels in the model are as follows:
 
-|toxic:|		      0.05439934|
+* toxic:		      0.05439934
 * identity_hate:	0.31089434
 
 ### Design, performance of tests and hypothesis:
