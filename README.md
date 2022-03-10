@@ -2,14 +2,18 @@
 ## Data Bias
 
 #### Goal of project:
-The purpose of this assignment was to explore the concept of bias by examining and querying the Perspective API released by Google Jigsaw for comment toxicity. After visual inspection of the comments, it appeared there could be some bias with regards to words related to LGBTQ. 
+The purpose of this assignment was to explore the concept of bias by examining and querying the Perspective API released by Google Jigsaw for comment toxicity. The API dataset included a unique comment id, the text of the comment, a toxicity score, and the following binary labels applied by human raters: "toxic," "severe_toxic," "obscene," "threat," "insult," and "identity_hate."
 
 #### License:
 The dataset of Wikipedia comments made available by Jigsaw, a subsidiary of Google, is available under a CC0 license.
 
+#### Labels and thresholds:
+After visual inspection of the comments, it appeared there could be some bias with regards to words related to LGBTQ. Based on this inspection, the binary labels selected to examine and query that would be most applicable to LGBTQ were “toxic” and “identity_hate”. Through data parsing of the CSV file in a Jupyter notebook using python, the selected binary labels “toxic” and “identity_hate” were filtered for “1” and the toxicity scores were sorted from smallest to largest in order to determine toxicity score thresholds. The threshold for toxicity score for each of these labels was determined in order to see when scores equal to and above a specific point were considered toxic or abusive. The threshold of the selected labels in the model are as follows:
 
-
-Based on this inspection, the binary labels selected that would be most applicable to LGBTQ were “toxic”, “severe_toxic”, and “identity_hate”. Through data parsing of the CSV file into an excel format, the selected binary labels “toxic”, “severe_toxic”, and “identity_hate” were filtered for “1” and the toxicity scores were sorted from smallest to largest in order to determine toxicity score thresholds. The threshold for toxicity score for each of these labels was determined to see when scores equal to and above a specific point were considered toxic or abusive. The threshold of the selected labels in the model are as follows:
-
-toxic:		0.05439934
+toxic:		      0.05439934
 identity_hate:	0.31089434
+
+#### Design, performance of tests and hypothesis:
+This assignment tests the Perspective's model for bias by looking at performance of the labeled dataset and comparing toxicity scores from submitted original comment queries. Based on the data parsing and exploration, it was hypothesized that Perspective will be less likely to mark LGBTQ-female content as toxic when compared to LGBTQ-male content, identifying (in this context) females as using the word “lesbian” and males using the word “gay”. Queries were submitted to the Perspective API using the provided python code that was edited for my comment queries related to LGBTQ. The submitted comment queries and their toxicity scores for the model are as follows:
+
+![image](https://user-images.githubusercontent.com/99284940/157593513-23dcd9ba-e59c-405e-b683-49573b977b68.png)
