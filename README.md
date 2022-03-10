@@ -1,4 +1,4 @@
-# Assignment_2
+# Assignment 2
 ## Data Bias
 
 #### Goal of project:
@@ -17,3 +17,13 @@ identity_hate:	0.31089434
 This assignment tests the Perspective's model for bias by looking at performance of the labeled dataset and comparing toxicity scores from submitted original comment queries. Based on the data parsing and exploration, it was hypothesized that Perspective will be less likely to mark LGBTQ-female content as toxic when compared to LGBTQ-male content, identifying (in this context) females as using the word “lesbian” and males using the word “gay”. Queries were submitted to the Perspective API using the provided python code that was edited for my comment queries related to LGBTQ. The submitted comment queries and their toxicity scores for the model are as follows:
 
 ![image](https://user-images.githubusercontent.com/99284940/157593513-23dcd9ba-e59c-405e-b683-49573b977b68.png)
+
+#### Analysis:
+Initial observations show the word “gay” and the phrases “he is gay” and “she is gay” to have the highest toxicity scores out of all the words and phrases queried. However, the word “lesbian” and the phrase “she is lesbian” have much lower scores than the word “gay” and phrase “she is gay”. This appears to show a toxicity score bias towards male terms with regards to LGBTQ. These toxicity scores provided a dataset to compare my own small test set to. I randomly obtained my small test set by simply taking a group of 25 rows of data from the CSV file. I applied the following subset of my original comment queries to my small data set and obtained the following scores:
+
+Gay
+Lesbian
+He is gay
+She is lesbian
+
+AFTER MY SMALL TEST SET, …
