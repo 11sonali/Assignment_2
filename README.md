@@ -1,7 +1,7 @@
 # Assignment 2
 ## Data Bias
 
-#### Goal of project:
+### Goal of project:
 The purpose of this assignment was to explore the concept of bias by examining and querying the Perspective API released by Google Jigsaw for comment toxicity. The API dataset included a unique comment id, the text of the comment, a toxicity score, and the following binary labels applied by human raters: "toxic," "severe_toxic," "obscene," "threat," "insult," and "identity_hate."
 
 #### License:
