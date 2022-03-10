@@ -10,8 +10,8 @@ The dataset of Wikipedia comments made available by Jigsaw, a subsidiary of Goog
 #### Labels and thresholds:
 After visual inspection of the comments, it appeared there could be some bias with regards to words related to LGBTQ. Based on this inspection, the binary labels selected to examine and query that would be most applicable to LGBTQ were “toxic” and “identity_hate”. Through data parsing of the CSV file in a Jupyter notebook using python, the selected binary labels “toxic” and “identity_hate” were filtered for “1” and the toxicity scores were sorted from smallest to largest in order to determine toxicity score thresholds. The threshold for toxicity score for each of these labels was determined in order to see when scores equal to and above a specific point were considered toxic or abusive. The threshold of the selected labels in the model are as follows:
 
-toxic:		      0.05439934
-identity_hate:	0.31089434
+*toxic:		      0.05439934
+*identity_hate:	0.31089434
 
 #### Design, performance of tests and hypothesis:
 This assignment tests the Perspective's model for bias by looking at performance of the labeled dataset and comparing toxicity scores from submitted original comment queries. Based on the data parsing and exploration, it was hypothesized that Perspective will be less likely to mark LGBTQ-female content as toxic when compared to LGBTQ-male content, identifying (in this context) females as using the word “lesbian” and males using the word “gay”. Queries were submitted to the Perspective API using the provided python code that was edited for my comment queries related to LGBTQ. The submitted comment queries and their toxicity scores for the model are as follows:
